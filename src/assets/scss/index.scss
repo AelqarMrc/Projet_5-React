@@ -1,0 +1,178 @@
+@import "./main.scss";
+
+
+$font-family: 'Montserrat', sans-serif;
+$border-color: #9a9a9a;
+$background-color: #f2f2f2;
+$text-color: white;
+
+html {
+
+  height: 100%;
+    body {
+      font-family: $font-family;
+      margin: 2em 5em;
+    }
+
+}
+
+
+
+.card {
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card-title h2 {
+    margin: 16px 0;
+    font-size: 1.5em;
+  }
+
+  .card-description p {
+    font-size: 1em;
+    color: $text-color;
+  }
+}
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3em 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 4em;
+
+      li {
+        list-style: none;
+        
+        a {
+          text-decoration: none;
+          color: black;
+          font-weight: 500;
+          font-size: 1.5em;
+        }
+      }
+    }
+}
+
+.header {
+  display: none;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  .banner-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-text {
+    font-family: $font-family;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-weight: bold;
+    width: 100%;
+    
+  }
+}
+
+.gallery {
+  background-color: $background-color;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-radius: 1.5em;
+  margin: 2em 0;
+}
+
+footer {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+    img{
+      width: 100%;
+    }
+}
+
+    // MEDIA QUERIES //
+
+
+@media all and (max-width:$mobile){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
+
+@media all and (min-width:$mobile) and (max-width:$tablette){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
+@media all and (min-width:$desktop) and (max-width:$tv){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
+@media all and (min-width:$tv){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}

@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 export default function Card({title}) {
   return (
-    <div className='card'>
-      <div className='card-title'>
-        <h2>{title}</h2>
+      <div className='card'>
+        <div className='card-title'>
+          <h2>{title}</h2>
+        </div>
       </div>
-    </div>
   )
 }
 

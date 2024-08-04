@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Banner from '../../components/Banner';
 import Locations from '../../components/Locations';
 import logementsdata from '../../utils/logements.json';
-import '../../style.css';
+import Gallery from '../../components/Gallery.jsx';
+import '../../assets/scss/index.scss';
 
 
 function Home() {
@@ -17,8 +18,7 @@ function Home() {
     <div className="App">
       <Banner />
       <main>
-      <Locations logements={logements} />
-
+      <Gallery logements={logements} />
       </main>
     </div>
   );

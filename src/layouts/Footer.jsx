@@ -1,7 +1,10 @@
 import React from 'react'
+import KasaFooter from '../Kasa-Footer.png'
 
 export default function Footer() {
   return (
-    <div>Footer</div>
+    <footer>
+      <img src={KasaFooter} alt="Footer" />
+    </footer>
   )
 }
