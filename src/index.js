@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider, BrowserRouter, Routes, Route, Link
 import Layout from "./layouts/Layout"
 import Home from './pages/Home/index.jsx';
 import About from './pages/About/index.jsx';
+import Location from './pages/Location/index.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         path: "about",
         element: <About />,
       },
+      {
+        path: "location/:id",
+        element: <Location />,
+      }
     ]
   },
 ]);

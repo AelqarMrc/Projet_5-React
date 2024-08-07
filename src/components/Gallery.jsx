@@ -5,7 +5,7 @@ export default function Gallery({ logements }) {
   return (
     <section className="gallery">
       {logements.map(logement => (
-        <Card key={logement.id} title={logement.title} />
+        <Card id={logement.id} title={logement.title} cover={logement.cover}/>
       ))}
     </section>
   );
