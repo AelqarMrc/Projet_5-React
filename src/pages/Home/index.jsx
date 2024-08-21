@@ -1,7 +1,6 @@
 // App.js
 import React, { useState, useEffect } from 'react';
 import Banner from '../../components/Banner';
-import Locations from '../../components/Locations';
 import logementsdata from '../../utils/logements.json';
 import Gallery from '../../components/Gallery.jsx';
 import '../../assets/scss/index.scss';
