@@ -476,4 +476,14 @@ footer {
       font-size: 145px;
     }
   }
+
+  footer {
+    img {
+      display: none;
+    }
+
+    .footer-mobile {
+      display: block;
+    }
+  }
 }
