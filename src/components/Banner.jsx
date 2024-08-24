@@ -1,11 +1,15 @@
 import React from 'react'
-import banniere from '../banniere.png'
 
-export default function Banner() {
-  return (
+
+const Banner = ({image, texte}) => {
+
+  return(
     <div className='banner'>
-      <img src={banniere} alt="banner" className='banner-image'/>
-      <div className='banner-text'>Chez vous, partout et ailleurs</div>
+      <img src={image} alt="banner" className='banner-image'/>
+      <div className='banner-text'>{texte}</div>
     </div>
   )
-}
+}    
+
+
+export default Banner;

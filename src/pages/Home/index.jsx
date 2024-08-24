@@ -1,10 +1,10 @@
 // App.js
 import React, { useState, useEffect } from 'react';
-import Banner from '../../components/Banner';
+import Banner from '../../components/Banner.jsx';
 import logementsdata from '../../utils/logements.json';
 import Gallery from '../../components/Gallery.jsx';
 import '../../assets/scss/index.scss';
-
+import banniere from '../../banniere.png';
 
 function Home() {
   const [logements, setLogements] = useState([])
@@ -15,7 +15,7 @@ function Home() {
 
   return (
     <div className="App">
-      <Banner />
+      <Banner image={banniere} texte={"Chez vous, partout et ailleurs"}/>
       <main>
       <Gallery logements={logements} />
       </main>

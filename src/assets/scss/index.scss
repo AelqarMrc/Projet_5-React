@@ -1,54 +1,26 @@
 @import "./main.scss";
 
-
 $font-family: 'Montserrat', sans-serif;
 $border-color: #9a9a9a;
 $background-color: #f2f2f2;
 $background-color-red: #FF6060;
 $text-color: white;
+$mobile: 768px;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
-
   height: 100%;
-    body {
-      font-family: $font-family;
-      margin: 2em 5em;
-    }
 
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  display: flex;
-  border-radius: 8px;
-  margin: 16px;
-  text-align: center;
-  width: 28%;
-  background-color: #FF6060;
-  color: $text-color;
-
-  & img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .card-title h2 {
-    margin: 16px 0;
-    font-size: 1.5em;
-  }
-
-  .card-description p {
-    font-size: 1em;
-    color: $text-color;
+  body {
+    font-family: $font-family;
+    margin: 2em 5em;
   }
 }
-
 
 header {
   display: flex;
@@ -61,23 +33,23 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
-    ul {
-      display: flex;
-      flex-direction: row;
-      gap: 4em;
 
-      li {
-        list-style: none;
-        
-        a {
-          text-decoration: none;
-          color: black;
-          font-weight: 500;
-          font-size: 1.5em;
-        }
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        font-size: 1.5em;
       }
     }
+  }
 }
 
 .header {
@@ -88,6 +60,7 @@ header {
   position: relative;
   text-align: center;
   color: white;
+  margin-bottom: 2em;
 
   .banner-image {
     width: 100%;
@@ -103,20 +76,48 @@ header {
     font-size: 3em;
     font-weight: bold;
     width: 100%;
-    
   }
 }
 
 .gallery {
-  background-color: $background-color;
-  padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  background-color: $background-color;
+  padding: 20px;
   gap: 20px;
   border-radius: 1.5em;
-  margin: 2em 0;
 }
 
+.card {
+  display: flex;
+  border-radius: 8px;
+  margin: 16px;
+  text-align: center;
+  width: 28%;
+  background-color: #FF6060;
+  color: $text-color;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .card-title {
+    h2 {
+      margin: 16px 0;
+      font-size: 1.5em;
+    }
+  }
+
+  .card-description {
+    p {
+      font-size: 1em;
+      color: $text-color;
+    }
+  }
+}
 
 .location-container {
   width: 100%;
@@ -169,17 +170,17 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 3em;
-  
+
   h1 {
     margin: 0;
     font-weight: 500;
     color: $background-color-red;
   }
-  p{
+
+  p {
     margin-top: 6px;
     font-weight: 500;
   }
-
 }
 
 .tags {
@@ -198,27 +199,32 @@ header {
 
 .host-info {
   display: flex;
+  flex-direction: column; 
   gap: 1em;
   align-items: center;
   color: $background-color-red;
-  
+
+  span {
+    display: flex;
+    flex-direction: column; // Ensure the names are in column
+    align-items: center;
+  }
 
   img {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-top: 10px; // Adjust margin as needed
+  }
+
+  p {
+    margin: 0; // Ensure no extra margin
   }
 }
 
-.rating {
-  font-size: 1.5rem;
-  color: gold;
-}
 
-
-
-.dropdown, .about-dropdown {
+.dropdown,
+.about-dropdown {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -227,85 +233,81 @@ header {
 
   &.about-dropdown {
     flex-direction: column;
+    gap: 2em;
 
     .dropdown-active {
       width: 100%;
       display: flex;
-      gap: 3em
-      9;
     }
   }
 
-    .dropdown-active {
-      width: 45%;
-      display: flex;
-      flex-direction: column;
-      
+  .dropdown-active {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-item {
+    color: white;
+    background: #FF6060;
+    padding: 6px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    flex-wrap: wrap;
+
+    button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: white;
     }
 
-      .dropdown-item{
-        color: white;
-        background: #FF6060;
-        padding: 6px 10px;
-        border-radius: 8px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: 600;
-        flex-wrap: wrap;
-      
+    span {
+      flex-grow: 1;
+    }
 
-
-        button {
-          background: none;
-          border: none;
-          font-size: 1.2rem;
-          cursor: pointer;
-          color: white;
-        }
-        
-        span {
-          flex-grow: 1;
-        }
-    
-        .arrow-button {
-          background: none;
-          border: none;
-          cursor: pointer;
-          padding: 0;
-          transition: transform 0.3s ease;
-    
-          &.rotate {
-            transform: rotate(180deg);
-          }
-        }
-        
-
-        }
-        
-}
-.dropdown-content{
-  max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    opacity: 0;
-  
-    &.open {
-      max-height: 200px; /* Adjust height as needed */
-      opacity: 1;    
-  }   
-  p, ul {
-      color: black;
-      margin-top: 0;
-      padding: 24px 16px;
-      width: 100%;
+    .arrow-button {
+      background: none;
       border: none;
-      background-color: #f9f9f9;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.3s ease;
+
+      &.rotate {
+        transform: rotate(180deg);
       }
+    }
+  }
 }
 
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
 
+  &.open {
+    max-height: 200px; /* Adjust height as needed */
+    opacity: 1;
+    max-height: 85px;
+    color: black;
+    margin-top: 0px;
+    padding: 16px 16px;
+    border: none;
+    background-color: rgb(249, 249, 249);
+  }
+
+  ul {
+    gap: 8px;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+  }
+}
 
 footer {
   position: relative;
@@ -313,70 +315,165 @@ footer {
   transform: translateX(-50%);
   margin-top: 2em;
   width: 100vw;
-    img{
-      width: 100%;
-    }
-}
 
+  img {
+    width: 100%;
+  }
+  .footer-mobile {
+    display: none;
+  }
+}
 
 .hiden {
-  display: none!important;
+  display: none !important;
 }
 
-    // MEDIA QUERIES //
+.error.container{
+  display: flex;
+  align-items: center;
+  gap: 140px;
+  flex-direction: column;
+  padding: 140px 0;
+  color: $background-color-red;
 
+  h1{
+    font-size: 290px;
+    margin: 0;
+  }
+}
 
+// MEDIA QUERIES //
 
-@media all and (max-width:$mobile){
-  body{
-    &>header{}
-    &>nav{}
-    &>main{
-      &>section{}
-      &>article{}
+@media all and (max-width: $mobile) {
+  body {
+    & > header {}
+    & > nav {}
+    & > main {
+      & > section {}
+      & > article {}
     }
-    &>footer{
-      &>ul{}
+    & > footer {
+      & > ul {}
     }
   }
 }
 
-@media all and (min-width:$mobile) and (max-width:$tablette){
-  body{
-    &>header{}
-    &>nav{}
-    &>main{
-      &>section{}
-      &>article{}
+@media all and (min-width: $mobile) and (max-width: $tablette) {
+  body {
+    & > header {}
+    & > nav {}
+    & > main {
+      & > section {}
+      & > article {}
     }
-    &>footer{
-      &>ul{}
-    }
-  }
-}
-@media all and (min-width:$desktop) and (max-width:$tv){
-  body{
-    &>header{}
-    &>nav{}
-    &>main{
-      &>section{}
-      &>article{}
-    }
-    &>footer{
-      &>ul{}
+    & > footer {
+      & > ul {}
     }
   }
 }
-@media all and (min-width:$tv){
-  body{
-    &>header{}
-    &>nav{}
-    &>main{
-      &>section{}
-      &>article{}
+
+@media all and (max-width: $mobile) {
+  body {
+    margin: 1em 2em !important;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .banner {
+    margin-bottom: 1em;
+    
+    .banner-text {
+    font-size: 1em !important; 
     }
-    &>footer{
-      &>ul{}
+  }
+  
+  .gallery {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .carousel-item img{
+    border-radius: 8px !important;
+    
+  }
+
+  .details-container {
+    flex-direction: column;
+    margin-top: 0.5em;
+
+    h1 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+  }
+
+  .tags {
+    margin-bottom: 14px;
+  }
+
+  .host-info {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    
+    div {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    }
+  }
+
+  .dropdown{
+    gap: 1em;
+    padding-top: 14px;
+    margin-top: 0;
+  }
+
+  .dropdown,
+  .about-dropdown {
+    flex-direction: column;
+
+    .dropdown-active {
+      width: 100%;
+    }
+  }
+
+  .dropdown-item {
+    font-size: 1em;
+  }
+
+  .carousel-arrow {
+    font-size: 2rem;
+  }
+
+  .error.container {
+    padding: 70px 0;
+
+    h1 {
+      font-size: 145px;
     }
   }
 }

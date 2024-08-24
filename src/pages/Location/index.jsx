@@ -61,13 +61,17 @@ export default function Location({ logements }) {
 
         <span>
           <div className="host-info">
-            <p>{logement.host.name}</p>
-            <img src={logement.host.picture} alt={logement.host.name} />
-          </div>
-
-          <div className="rating">
+            <div>
+              <span>
+                <p>{logement.host.name.split(' ')[0]}</p>
+                <p>{logement.host.name.split(' ')[1]}</p>
+              </span>
+                <img src={logement.host.picture} alt={logement.host.name} />
+            </div>
             {'⭐'.repeat(logement.rating)}
           </div>
+
+
         </span>
 
 
