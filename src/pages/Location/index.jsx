@@ -60,8 +60,8 @@ export default function Location({ logements }) {
         </span>
 
         <span>
-          <div className="host-info">
-            <div>
+          <div id="host-info">
+            <div className='host-info'>
               <span>
                 <p>{logement.host.name.split(' ')[0]}</p>
                 <p>{logement.host.name.split(' ')[1]}</p>

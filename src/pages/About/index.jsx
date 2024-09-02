@@ -8,7 +8,7 @@ import banniere from '../../banniere2.png';
 function about() {
   return (
     <div className="app">
-    <Banner className="banner" image={banniere} texte={""}/>
+    <Banner image={banniere} texte={""}/>
     <main>
           <div className="about-dropdown">
       {aboutlist.map((aboutlist, index) => (
