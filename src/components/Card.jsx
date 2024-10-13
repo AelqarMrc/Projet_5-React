@@ -6,9 +6,11 @@ export default function Card({id, title, cover}) {
     
     <Link to={`/location/${id}`} className="card">
         <article className='logement-card'>
-        <img src={cover} alt="image logement" />
-        <div className='card-title hiden'>
+        <img src={cover} alt="logement" className='logement-image'/>
+        <div className='card-shadow'>
+        <div className='card-title'>
           <h2>{title}</h2>
+        </div>
         </div>
         </article>
       </Link>

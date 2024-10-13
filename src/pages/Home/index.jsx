@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Banner from '../../components/Banner.jsx';
 import logementsdata from '../../utils/logements.json';
-import Gallery from '../../components/Gallery.jsx';
+import Locations from '../../components/Locations.jsx';
 import '../../assets/scss/index.scss';
 import banniere from '../../banniere.png';
 
@@ -17,7 +17,7 @@ function Home() {
     <div className="App">
       <Banner image={banniere} texte={"Chez vous, partout et ailleurs"}/>
       <main>
-      <Gallery logements={logements} />
+      <Locations logements={logements} />
       </main>
     </div>
   );
